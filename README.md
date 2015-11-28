@@ -7,3 +7,4 @@ Required:
   1. Django>=1.7
   2. Python2.7
   3. django-localflavor
+  4. abc

@@ -58,6 +58,8 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 """
+* This was the original code (to connect to sqlite3
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
