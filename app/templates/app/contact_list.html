@@ -1,0 +1,54 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Contact list{% endblock %}
+
+{% block content %}
+
+	{% if contact_list %}
+		<h3>Click on a contact to view details</h3>
+		<ul class="list-group">
+		{% for contact in contact_list %}
+			<li class="list-group-item">
+				<a href="{{ contact.get_absolute_url }}">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					 {{ contact.full_name }}
+				</a>
+			</li>
+		
+		{% endfor %}
+		</ul>
+
+<!--
+<hr>
+
+<table border="1" width="100%">
+	<tr>
+		<td>Full Name</td>
+		<td>Email</td>
+		<td>Mobile</td>
+		<td>Absolute URL</td>
+	</tr>
+	{% for contact in contact_list %}
+		<tr>
+			<td>
+				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+				{{ contact.full_name }}
+			</td>
+			<td>{{ contact.email }}</td>
+			<td>{{ contact.mobile_phone }}</td>
+			<td>{{ contact.get_absolute_url }}</td>
+
+		</tr>
+	{% endfor %}
+</table>
+
+-->
+
+
+
+
+	{% else %}
+		<h1>The phonebook is empty!</h1>
+	{% endif %}
+
+{% endblock %}
